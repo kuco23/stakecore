@@ -1,0 +1,12 @@
+.image-like {
+    width: 100%;
+    aspect-ratio: 1920 / 800;
+    text-align: center;
+  }
+
+.center {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 60%);
+}
