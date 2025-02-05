@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Marquee from "react-fast-marquee";
-import { RiFacebookCircleFill, RiTwitterXLine, RiLinkedinFill, RiGithubLine, RiCircleFill, RiDownloadLine } from '@remixicon/react'
+import { RiFacebookCircleFill, RiTwitterXLine, RiLinkedinFill, RiGithubLine, RiCircleFill } from '@remixicon/react'
+import { DelegationAddressLink, ValidatorNodeLink } from '../utils/links';
 import profile from "../../assets/images/about/profile.svg"
 import partner1 from "../../assets/images/client-logos/partner1.png"
 import partner2 from "../../assets/images/client-logos/partner2.png"
@@ -18,11 +19,8 @@ import partner12 from "../../assets/images/client-logos/partner12.png"
 import partner13 from "../../assets/images/client-logos/partner13.png"
 import partner14 from "../../assets/images/client-logos/partner14.png"
 import partner15 from "../../assets/images/client-logos/partner15.png"
-import { validatorNodeId, delegationAddress, validatorLink, delegationLink } from '../../utlits/data/constants'
+import SlideUp from '../../utlits/animations/slideUp'
 
-
-
-import SlideUp from '../../utlits/animations/slideUp';
 
 const Hero = () => {
     return (
@@ -35,7 +33,7 @@ const Hero = () => {
                             <div className="about-image-part">
                                 <img src={profile} alt="About Me" />
                                 <h2>stakecore</h2>
-                                <p>Flare network validator, FTSO-V2 and FDC provider.
+                                <p>Flare network validator, FTSO and FDC provider.
                                     Put your FLR to work by staking and delegating with us!</p>
                                 <div className="about-social text-center">
                                     <ul>
@@ -62,11 +60,10 @@ const Hero = () => {
                                     <ul>
                                         <li className='d-flex align-items-center'><i><RiCircleFill size={14} /></i> connected</li>
                                         <li className='d-flex align-items-center'>
-                                            validator node id&nbsp;-&nbsp; <Link href="javascript(0);" onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}>{validatorNodeId}</Link>
-
+                                            stake to our validator node {'\u00A0'} <ValidatorNodeLink />
                                         </li>
                                         <li className='d-flex align-items-center'>
-                                            delegation address&nbsp;-&nbsp; <Link to={delegationLink}>{delegationAddress}</Link>
+                                            delegato to our delegation address {'\u00A0'} <DelegationAddressLink />
                                         </li>
                                     </ul>
                                 </div>
