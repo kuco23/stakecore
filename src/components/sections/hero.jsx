@@ -37,10 +37,10 @@ const Hero = () => {
                                     Put your FLR to work by staking and delegating with us!</p>
                                 <div className="about-social text-center">
                                     <ul>
-                                        <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li>
+                                        {/* <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li> */}
                                         <li><Link to=""><RiTwitterXLine size={20} /></Link></li>
-                                        <li><Link to=""><RiLinkedinFill size={20} /></Link></li>
-                                        <li><Link to=""><RiGithubLine size={20} /></Link></li>
+                                        {/* <li><Link to=""><RiLinkedinFill size={20} /></Link></li> */}
+                                        {/* <li><Link to=""><RiGithubLine size={20} /></Link></li> */}
                                     </ul>
                                 </div>
                             </div>

@@ -9,11 +9,11 @@ export const menuList = [
         path: "/about",
         label: "About"
     },
-    {
+/*     {
         id: 3,
         path: "/service",
         label: "Service"
-    },
+    }, */
     {
         id: 4,
         path: "/performance",

@@ -13,7 +13,7 @@ const ContactOption = () => {
                                 <i> <RiMapPinLine size={20} /></i>
                             </div>
                             <h2>our office:</h2>
-                            <p>Jurain,Dhaka Bangladesh</p>
+                            <p>Ljubljana, Slovenia</p>
                         </div>
                     </SlideUp>
                     <SlideUp delay={3}>
@@ -22,7 +22,7 @@ const ContactOption = () => {
                                 <i> <RiPhoneLine size={20} /></i>
                             </div>
                             <h2>contact number:</h2>
-                            <p>+1234321321</p>
+                            <p>+38640211997</p>
                         </div>
                     </SlideUp>
                     <SlideUp delay={4}>
@@ -31,7 +31,7 @@ const ContactOption = () => {
                                 <i> <RiMailLine size={20} /></i>
                             </div>
                             <h2>Email us:</h2>
-                            <p>websitename@mail.com</p>
+                            <p>stakecore@gmail.com</p>
                         </div>
                     </SlideUp>
                 </div>
