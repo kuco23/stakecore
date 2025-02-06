@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "----------- github pages deploy -----------": "",
+    "build-all": "yarn && yarn build && echo stakecore.wtf > dist/CNAME",
+    "deploy": "yarn build:production && gh-pages -d dist"
   },
   "dependencies": {
     "@remixicon/react": "^4.2.0",
