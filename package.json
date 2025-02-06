@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "stakecore.org",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "----------- github pages deploy -----------": "",
-    "build-all": "yarn && yarn build && echo stakecore.wtf > dist/CNAME",
-    "deploy": "yarn build-all && gh-pages -d dist"
+    "build-all": "yarn && yarn build && echo stakecore.org > dist/CNAME",
+    "deploy": "yarn build-all && gh-pages -d dist --no-history"
   },
   "dependencies": {
     "@remixicon/react": "^4.2.0",
