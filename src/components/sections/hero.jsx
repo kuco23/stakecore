@@ -38,7 +38,7 @@ const Hero = () => {
                                 <div className="about-social text-center">
                                     <ul>
                                         {/* <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li> */}
-                                        <li><Link to=""><RiTwitterXLine size={20} /></Link></li>
+                                        <li><Link target="_blank" to="https://x.com/stake_core"><RiTwitterXLine size={20} /></Link></li>
                                         {/* <li><Link to=""><RiLinkedinFill size={20} /></Link></li> */}
                                         {/* <li><Link to=""><RiGithubLine size={20} /></Link></li> */}
                                     </ul>
@@ -63,7 +63,7 @@ const Hero = () => {
                                             stake to our validator node {'\u00A0'} <ValidatorNodeLink />
                                         </li>
                                         <li className='d-flex align-items-center'>
-                                            delegato to our delegation address {'\u00A0'} <DelegationAddressLink />
+                                            delegate to our address {'\u00A0'} <DelegationAddressLink />
                                         </li>
                                     </ul>
                                 </div>
@@ -91,7 +91,6 @@ const Hero = () => {
                                                 <img src={partner13} alt="" />
                                                 <img src={partner14} alt="" />
                                                 <img src={partner15} alt="" />
-                                                <img src={partner1} alt="" />
                                             </Marquee>
                                         </div>
                                     </div>

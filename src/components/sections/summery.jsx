@@ -1,5 +1,6 @@
 import React from 'react'
 import { RiMailSendLine } from '@remixicon/react'
+import { Link } from 'react-router-dom'
 import SlideUp from '../../utlits/animations/slideUp'
 import profile from "../../assets/images/about/profile.svg"
 
@@ -32,7 +33,7 @@ const Summery = () => {
                                     If want to join our team or have any questions, feel free to contact us.
                                 </p>
                                 <div className="hero-btns">
-                                    <a href="contact.html" className="theme-btn">Get In touch<i> <RiMailSendLine size={16} /> </i></a>
+                                    <Link to="/contact" className="theme-btn">Get In touch<i> <RiMailSendLine size={16} /> </i></Link>
                                 </div>
                             </div>
                         </SlideUp>
