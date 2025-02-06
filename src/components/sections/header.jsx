@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { RiEthLine } from '@remixicon/react'
-import logo from '../../assets/images/logo.png'
 import { menuList } from '../../utlits/fackData/menuList'
+import { connectWallet } from '../../utlits/wallet/connect'
+
 
 const Header = () => {
     const pathName = useLocation().pathname
@@ -27,6 +27,7 @@ const Header = () => {
             setisSticky(false)
         }
     }
+
     return (
         <header className={`main-header ${isSticky ? "fixed-header" : ""}`}>
             <div className="header-upper">
@@ -65,7 +66,7 @@ const Header = () => {
 
                         </div>
                         <div className="menu-btns">
-                            <Link to="/contact" className="theme-btn">Connect Wallet</Link>
+                            <Link onClick={connectWallet} className="theme-btn">Connect Wallet</Link>
                         </div>
                     </div>
                 </div>
