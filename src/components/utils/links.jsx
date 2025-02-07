@@ -9,9 +9,9 @@ export const CopyPasteButton = ({ text }) => {
 }
 
 export const ValidatorNodeLink = () => {
-    return <span><Link target="_blank" to={validatorLink}>{reduceHash(validatorNodeId)}</Link> <CopyPasteButton text={validatorNodeId} /></span>
+    return <span><Link target="_blank" to={validatorLink}>{reduceHash(validatorNodeId)}</Link>&nbsp;<CopyPasteButton text={validatorNodeId} /></span>
 }
 
 export const DelegationAddressLink = () => {
-    return <span><Link target="_blank" to={delegationLink}>{reduceHash(delegationAddress)}</Link> <CopyPasteButton text={delegationAddress} /></span>
+    return <span><Link target="_blank" to={delegationLink}>{reduceHash(delegationAddress)}</Link>&nbsp;<CopyPasteButton text={delegationAddress} /></span>
 }
