@@ -55,13 +55,15 @@ const Preloader = () => {
             </svg>
             <div className="preloader-heading">
                 <div className="load-text">
-                    <span>L</span>
-                    <span>o</span>
+                    <span>S</span>
+                    <span>t</span>
                     <span>a</span>
-                    <span>d</span>
-                    <span>i</span>
-                    <span>n</span>
-                    <span>g</span>
+                    <span>k</span>
+                    <span>e</span>
+                    <span>c</span>
+                    <span>o</span>
+                    <span>r</span>
+                    <span>e</span>
                 </div>
             </div>
         </motion.div>
