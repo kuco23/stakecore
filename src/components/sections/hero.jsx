@@ -32,8 +32,7 @@ const Hero = () => {
                         <SlideUp>
                             <div className="about-image-part">
                                 <img src={profile} alt="About Me" />
-                                <h2>stakecore</h2>
-                                <p>Flare network validator, FTSO and FDC provider.
+                                <p style={{marginTop: 30, marginBottom: 40}}>Flare network validator, FTSO and FDC provider.
                                     Put your FLR to work by staking and delegating with us!</p>
                                 <div className="about-social text-center">
                                     <ul>
