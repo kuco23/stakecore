@@ -1,13 +1,11 @@
 import { create } from 'zustand'
 
-export const useStore = create<GlobalState>((set) => ({
+
+export const useGlobalStore = create<GlobalState>((set) => ({
   walletProvider: null,
-  walletAddress: null,
-  walletProviders: null,
   setWalletProvider: (provider: EIP6963ProviderDetail) => set({ walletProvider: provider }),
+  walletAddress: null,
   setWalletAddress: (address: string) => set({ walletAddress: address }),
-  addWalletProvider: (provider: EIP6963ProviderDetail) => set((state) => {
-    const walletProviders = state.walletProviders ?? []
-    return { walletProviders: [...walletProviders, provider] }
-  })
+  walletVisible: false,
+  setWalletVisible: (visible: boolean) => set({ walletVisible: visible }),
 }))

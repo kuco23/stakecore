@@ -31,9 +31,10 @@
 
 .wallet .provider button {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
 
+  width: 100%;
   align-items: center;
   border-radius: 0.5em;
   padding: 0.6em 1.2em;

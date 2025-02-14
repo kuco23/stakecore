@@ -1,8 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { menuList } from '../../utlits/fackData/menuList'
-import { connectWallet } from '../../utlits/wallet/connect'
+import { formatAddress } from '../../utlits/eip6963/formatting'
+import { useGlobalStore } from '../../utlits/store/global'
+import { useExternalStore } from '../../utlits/eip6963/discover'
 
+
+const ChooseWalletButton = () => {
+    const { walletProviders } = useExternalStore() // jumpstart wallet provider discovery
+    const walletAddress = useGlobalStore((state) => state.walletAddress)
+    const setWalletVisible = useGlobalStore((state) => state.setWalletVisible)
+    const text = walletAddress ? formatAddress(walletAddress) : "Connect Wallet"
+    return <Link onClick={() => setWalletVisible(true)} className="theme-btn">{text}</Link>
+}
 
 const Header = () => {
     const pathName = useLocation().pathname
@@ -66,7 +76,7 @@ const Header = () => {
 
                         </div>
                         <div className="menu-btns">
-                            <Link onClick={connectWallet} className="theme-btn">Connect Wallet</Link>
+                            <ChooseWalletButton />
                         </div>
                     </div>
                 </div>

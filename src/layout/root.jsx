@@ -4,7 +4,7 @@ import Header from '../components/sections/header'
 import Footer from '../components/sections/footer'
 import CallToAction from '../components/sections/callToAction'
 import Preloader from '../components/ui/preloader'
-import DiscoverWalletProviders from '../components/sections/wallet'
+import DiscoverWalletProviders from '../components/sections/eip6963'
 
 const RootLayout = () => {
 

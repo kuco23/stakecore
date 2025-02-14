@@ -42,6 +42,17 @@ export async function requestAccounts(
     }
 }
 
+export async function tryAutoConnect(detail: EIP6963ProviderDetail): Promise<string | null> {
+    const _chainId = await getChainId(detail.provider)
+    if (_chainId == chainId) {
+      const accounts = await getAccounts(detail.provider)
+      if (accounts?.length) {
+        return accounts[0]
+      }
+    }
+    return null
+  }
+
 export async function switchNetworkIfNecessary(
     ethereum: EIP1193Provider
 ): Promise<boolean> {

@@ -29,12 +29,17 @@ type EIP6963AnnounceProviderEvent = {
   }
 }
 
-// Global interface for storing the user and theme state.
+// Global interface for storing the internal component state
 interface GlobalState {
   walletProvider: EIP6963ProviderDetail | null
-  walletProviders: EIP6963ProviderDetail[] | null
-  walletAddress: string | null
   setWalletProvider: (provider: EIP6963ProviderDetail) => void
-  addWalletProvider: (provider: EIP6963ProviderDetail) => void
+  walletAddress: string | null
   setWalletAddress: (address: string) => void
+  walletVisible: boolean
+  setWalletVisible: (visible: boolean) => void
+}
+
+// Global interface for storing the external browser wallet state.
+interface ExternalState {
+  walletProviders: EIP6963ProviderDetail[]
 }
