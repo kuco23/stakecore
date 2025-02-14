@@ -12,7 +12,7 @@ function addOverlay(overlay: HTMLElement) {
 
 function removeOverlay(overlay: HTMLElement) {
     overlay.style.opacity = "0"
-    sleep(1000).then(() => {
+    sleep(500).then(() => {
         overlay.style.visibility = "hidden"
     })
 }
