@@ -3,16 +3,14 @@ import { Link, useLocation } from 'react-router-dom'
 import { menuList } from '../../utlits/fackData/menuList'
 import { formatAddress } from '../../utlits/eip6963/formatting'
 import { useGlobalStore } from '../../utlits/store/global'
-import { useExternalStore } from '../../utlits/eip6963/discover'
 
 
 const ChooseWalletButton = () => {
-    const { walletProviders } = useExternalStore() // jumpstart wallet provider discovery
     const walletProvider = useGlobalStore((state) => state.walletProvider)
     const walletAddress = useGlobalStore((state) => state.walletAddress)
     const setWalletVisible = useGlobalStore((state) => state.setWalletVisible)
-    return <Link onClick={() => setWalletVisible(true)} className="theme-btn">
-        {walletProvider ? <img width="16px" src={walletProvider.info.icon} alt={walletProvider.info.name} style={{marginRight: 8}} /> : null}
+    return <Link onClick={() => setWalletVisible(true)} className="theme-btn connect-wallet-button">
+        {walletProvider ? <img src={walletProvider.info.icon} alt={walletProvider.info.name} /> : null}
         {walletAddress ? formatAddress(walletAddress) : "Connect Wallet"}
     </Link>
 }

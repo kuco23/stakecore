@@ -11,7 +11,6 @@
   transform: translate(50%, 60%);
 }
 
-
 #overlay {
   visibility: hidden;
   display: flex;
@@ -26,4 +25,13 @@
   z-index: 1000;
   opacity: 0;
   transition: opacity 1s;
+}
+
+.connect-wallet-button {
+  min-width: 180px;
+}
+
+.connect-wallet-button > img {
+  width: 16px;
+  margin-right: 8px;
 }
