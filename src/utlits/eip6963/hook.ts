@@ -1,4 +1,3 @@
-import { Eip1193Provider } from 'ethers'
 import { chainId } from '../data/constants'
 import { useGlobalStore } from '../store/global'
 import { getAccounts, getChainId, tryAutoConnect } from './eip1193'
@@ -6,36 +5,38 @@ import type { MetaMaskInpageProvider } from '@metamask/providers'
 
 
 export async function addEip6963Hook(wallet: EIP6963ProviderDetail): Promise<void> {
-  const { setWalletAddress, setWalletProvider } = useGlobalStore.getState()
-  attachAccountChangeHandler(wallet.provider, setWalletAddress)
-  attachChainChangeHandler(wallet.provider, setWalletAddress)
+  attachAccountChangeHandler(wallet)
+  attachChainChangeHandler(wallet)
   const address = await tryAutoConnect(wallet)
   if (address !== null) {
-    setWalletProvider(wallet)
-    setWalletAddress(address)
+    const { setWalletAddress } = useGlobalStore.getState()
+    setWalletAddress(address, wallet)
   }
 }
 
-function attachAccountChangeHandler(wallet: Eip1193Provider, hook: (x: string | null) => void): void {
-  const metamask = wallet as MetaMaskInpageProvider
-  metamask?.on('accountsChanged', async (accounts) => {
-    const _chainId = await getChainId(wallet)
-    if (_chainId == chainId) {
-      hook(accounts[0])
+function attachAccountChangeHandler(wallet: EIP6963ProviderDetail): void {
+  const { setWalletAddress } = useGlobalStore.getState()
+  const metamask = wallet.provider as MetaMaskInpageProvider
+  metamask?.on('accountsChanged', async (accounts: string[]) => {
+    const _chainId = await getChainId(wallet.provider)
+    if (_chainId == chainId && accounts?.length > 0) {
+      setWalletAddress(accounts[0], wallet)
     } else {
-      hook(null)
+      setWalletAddress(null, null)
     }
   })
 }
 
-function attachChainChangeHandler(wallet: Eip1193Provider, hook: (x: string | null) => void): void {
-  const metamask = wallet as MetaMaskInpageProvider
+function attachChainChangeHandler(wallet: EIP6963ProviderDetail): void {
+  const { setWalletAddress } = useGlobalStore.getState()
+  const metamask = wallet.provider as MetaMaskInpageProvider
   metamask?.on('chainChanged', async _chainId => {
     if (_chainId === chainId) {
-      const accounts = await getAccounts(wallet)
-      hook(accounts[0])
-    } else {
-      hook(null)
+      const accounts = await getAccounts(wallet.provider)
+      if (accounts.length > 0) {
+        return setWalletAddress(accounts[0], wallet)
+      }
     }
+    setWalletAddress(null, null)
   })
 }

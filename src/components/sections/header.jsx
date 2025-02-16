@@ -8,11 +8,11 @@ import { useExternalStore } from '../../utlits/eip6963/discover'
 
 const ChooseWalletButton = () => {
     const { walletProviders } = useExternalStore() // jumpstart wallet provider discovery
-    const walletAddress = useGlobalStore((state) => state.walletAddress)
     const walletProvider = useGlobalStore((state) => state.walletProvider)
+    const walletAddress = useGlobalStore((state) => state.walletAddress)
     const setWalletVisible = useGlobalStore((state) => state.setWalletVisible)
     return <Link onClick={() => setWalletVisible(true)} className="theme-btn">
-        {walletAddress ? <img width="16px" src={walletProvider.info.icon} alt="wallet icon" style={{marginRight: 8}} /> : null}
+        {walletProvider ? <img width="16px" src={walletProvider.info.icon} alt={walletProvider.info.name} style={{marginRight: 8}} /> : null}
         {walletAddress ? formatAddress(walletAddress) : "Connect Wallet"}
     </Link>
 }

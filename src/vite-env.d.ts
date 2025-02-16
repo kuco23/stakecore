@@ -34,7 +34,7 @@ interface GlobalState {
   walletProvider: EIP6963ProviderDetail | null
   setWalletProvider: (provider: EIP6963ProviderDetail) => void
   walletAddress: string | null
-  setWalletAddress: (address: string) => void
+  setWalletAddress: (address: string, provider?: EIP6963ProviderDetail) => void
   walletVisible: boolean
   setWalletVisible: (visible: boolean) => void
 }

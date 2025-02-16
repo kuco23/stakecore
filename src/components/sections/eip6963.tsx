@@ -12,11 +12,10 @@ export const Eip6963 = () => {
   const { setWalletVisible } = useGlobalStore.getState()
 
   const executeConnect = async (detail: EIP6963ProviderDetail, address: string) => {
-    const { setWalletProvider, setWalletAddress } = useGlobalStore.getState()
+    const { setWalletAddress } = useGlobalStore.getState()
       const switched = await switchNetworkIfNecessary(detail.provider)
       if (!switched) return
-      setWalletProvider(detail)
-      setWalletAddress(address)
+      setWalletAddress(address, detail)
       setWalletVisible(false)
   }
 
