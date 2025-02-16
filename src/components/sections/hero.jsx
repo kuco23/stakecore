@@ -57,7 +57,6 @@ const Hero = () => {
                                 </h3>
                                 <div className="adress-field">
                                     <ul>
-                                        <li className='d-flex align-items-center'><i><RiCircleFill size={14} /></i> connected</li>
                                         <li className='d-flex align-items-center'>
                                             stake to our validator node {'\u00A0'} <ValidatorNodeLink />
                                         </li>
