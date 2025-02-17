@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Marquee from "react-fast-marquee";
-import { RiFacebookCircleFill, RiTwitterXLine, RiLinkedinFill, RiGithubLine, RiCircleFill } from '@remixicon/react'
+import { RiTwitterXLine } from '@remixicon/react'
 import { DelegationAddressLink, ValidatorNodeLink } from '../utils/links';
 import profile from "../../assets/images/about/profile.svg"
 import partner1 from "../../assets/images/client-logos/partner1.png"
