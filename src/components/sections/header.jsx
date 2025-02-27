@@ -9,7 +9,10 @@ const ChooseWalletButton = () => {
     const walletProvider = useGlobalStore((state) => state.walletProvider)
     const walletAddress = useGlobalStore((state) => state.walletAddress)
     const setWalletVisible = useGlobalStore((state) => state.setWalletVisible)
-    return <Link onClick={() => setWalletVisible(true)} className="theme-btn connect-wallet-button">
+    return <Link onClick={(event) => {
+        event.preventDefault()
+        setWalletVisible(true)
+    }} className="theme-btn connect-wallet-button">
         {walletProvider ? <img src={walletProvider.info.icon} alt={walletProvider.info.name} /> : null}
         {walletAddress ? formatAddress(walletAddress) : "Connect Wallet"}
     </Link>
