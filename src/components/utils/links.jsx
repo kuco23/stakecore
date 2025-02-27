@@ -5,7 +5,10 @@ import { validatorNodeId, validatorLink, delegationAddress, delegationLink } fro
 
 
 export const CopyPasteButton = ({ text }) => {
-    return <Link onClick={() => {navigator.clipboard.writeText(text)}}><RiFileCopyLine size={16} /></Link>
+    return <Link onClick={(event) => {
+        event.preventDefault()
+        navigator.clipboard.writeText(text)
+    }}><RiFileCopyLine size={16} /></Link>
 }
 
 export const ValidatorNodeLink = () => {
