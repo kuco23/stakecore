@@ -7,37 +7,37 @@ import singleProject4 from "../assets/images/projects/single-project4.jpg"
 
 const SingleProject = () => {
     return (
-        <div class="single-project-page-design">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center pb-30">
+        <div className="single-project-page-design">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-12 text-center pb-30">
                         <p>BRANDING - BENTO STUDIO</p>
                         <h1>Beautiful design for brand
                             new Business</h1>
                     </div>
                 </div>
             </div>
-            <div class="single-project-image">
+            <div className="single-project-image">
                 <img src={singleProjectImg} alt="image" />
             </div>
-            <div class="container pt-30">
-                <div class="row">
-                    <div class="col-lg-4">
+            <div className="container pt-30">
+                <div className="row">
+                    <div className="col-lg-4">
                         {/* <!-- START SINGLE LEFT DESIGN AREA --> */}
-                        <div class="single-project-page-left wow fadeInUp delay-0-2s">
-                            <div class="single-info">
+                        <div className="single-project-page-left wow fadeInUp delay-0-2s">
+                            <div className="single-info">
                                 <p>Year</p>
                                 <h3>2024</h3>
                             </div>
-                            <div class="single-info">
+                            <div className="single-info">
                                 <p>Client</p>
                                 <h3>Bento Studio</h3>
                             </div>
-                            <div class="single-info">
+                            <div className="single-info">
                                 <p>Services</p>
                                 <h3>Web Design</h3>
                             </div>
-                            <div class="single-info">
+                            <div className="single-info">
                                 <p>Project</p>
                                 <h3>Creative</h3>
                             </div>
@@ -45,8 +45,8 @@ const SingleProject = () => {
                         {/* <!-- / END SINGLE LEFT DESIGN AREA --> */}
                     </div>
                     {/* <!-- START SINGLE RIGHT DESIGN AREA --> */}
-                    <div class="col-lg-8">
-                        <div class="single-project-page-right wow fadeInUp delay-0-4s">
+                    <div className="col-lg-8">
+                        <div className="single-project-page-right wow fadeInUp delay-0-4s">
                             <h2>
                                 Description
                             </h2>
@@ -57,24 +57,24 @@ const SingleProject = () => {
                     {/* <!-- / END SINGLE RIGHT DESIGN AREA --> */}
                 </div>
                 {/* <!-- START SINGLE PAGE GALLERY DESIGN AREA --> */}
-                <div class="row pt-30">
-                    <div class="col-lg-6">
-                        <div class="single-image wow fadeInUp delay-0-2s">
+                <div className="row pt-30">
+                    <div className="col-lg-6">
+                        <div className="single-image wow fadeInUp delay-0-2s">
                             <img src={singleProject1} alt="gallery" />
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="single-image wow fadeInUp delay-0-4s">
+                    <div className="col-lg-6">
+                        <div className="single-image wow fadeInUp delay-0-4s">
                             <img src={singleProject2} alt="gallery" />
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="single-image wow fadeInUp delay-0-6s">
+                    <div className="col-lg-6">
+                        <div className="single-image wow fadeInUp delay-0-6s">
                             <img src={singleProject3} alt="gallery" />
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="single-image wow fadeInUp delay-0-8s">
+                    <div className="col-lg-6">
+                        <div className="single-image wow fadeInUp delay-0-8s">
                             <img src={singleProject4} alt="gallery" />
                         </div>
                     </div>

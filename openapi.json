@@ -1,0 +1,100 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+        "/api/form/submit": {
+            "post": {
+                "operationId": "FormController_submitForm",
+                "summary": "Submit form data",
+                "parameters": [],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/FormDto"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful form submission",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponseDto"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "data"
+                ]
+            }
+        },
+        "/api/form/messages": {
+            "get": {
+                "operationId": "FormController_getMessages",
+                "summary": "Get all messages",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "data"
+                ]
+            }
+        }
+    },
+    "info": {
+        "title": "FAsset Indexer Api",
+        "description": "Api for the FAsset indexer",
+        "version": "1.0",
+        "contact": {}
+    },
+    "tags": [],
+    "servers": [],
+    "components": {
+        "schemas": {
+            "FormDto": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "email",
+                    "message"
+                ]
+            },
+            "ApiResponseDto": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "number"
+                    },
+                    "data": {
+                        "type": "object"
+                    },
+                    "error": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "status"
+                ]
+            }
+        }
+    }
+}
