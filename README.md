@@ -1,8 +1,9 @@
-# React + Vite
+# Stakecore Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo includes frontend for the stakecore provider, hosted by github pages at https://stakecore.org.
 
-Currently, two official plugins are available:
+## What is Stakecore?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Stakecore is a validator, FTSO and FDC provider on Flare network. To earn APY on your FLR, go to https://portal.flare.network/ and either:
+- delegate to address `0x1e68DC808A240C096F0261144dc41fd4c883Cfb0`,
+- stake to our node `NodeID-KiAUisCU8UvXGnMRiUvoeyWneSdUm987`.
