@@ -31,7 +31,7 @@ const ContactOption = () => {
                                 <i> <RiMailLine size={20} /></i>
                             </div>
                             <h2>Email us:</h2>
-                            <p>stakecore@gmail.com</p>
+                            <p>stakecore23@gmail.com</p>
                         </div>
                     </SlideUp>
                 </div>
