@@ -19,6 +19,8 @@ import partner12 from "../../assets/images/client-logos/partner12.png"
 import partner13 from "../../assets/images/client-logos/partner13.png"
 import partner14 from "../../assets/images/client-logos/partner14.png"
 import partner15 from "../../assets/images/client-logos/partner15.png"
+import partner16 from "../../assets/images/client-logos/partner16.png"
+import partner17 from "../../assets/images/client-logos/partner17.png"
 import SlideUp from '../../utlits/animations/slideUp'
 
 
@@ -89,6 +91,8 @@ const Hero = () => {
                                                 <img src={partner13} alt="" />
                                                 <img src={partner14} alt="" />
                                                 <img src={partner15} alt="" />
+                                                <img src={partner16} alt="" />
+                                                <img src={partner17} alt="" />
                                             </Marquee>
                                         </div>
                                     </div>
