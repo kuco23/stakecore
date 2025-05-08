@@ -35,3 +35,11 @@
   width: 16px;
   margin-right: 8px;
 }
+
+.text-success {
+  color: lime;
+}
+
+.text-danger {
+  color: FireBrick;
+}

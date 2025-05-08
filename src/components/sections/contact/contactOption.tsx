@@ -1,5 +1,4 @@
 import { RiMailLine, RiMapPinLine, RiPhoneLine } from '@remixicon/react'
-import React from 'react'
 import SlideUp from '../../../utlits/animations/slideUp'
 
 const ContactOption = () => {
@@ -22,7 +21,7 @@ const ContactOption = () => {
                                 <i> <RiPhoneLine size={20} /></i>
                             </div>
                             <h2>contact number:</h2>
-                            <p>+38640211997</p>
+                            <p>+38640111887</p>
                         </div>
                     </SlideUp>
                     <SlideUp delay={4}>

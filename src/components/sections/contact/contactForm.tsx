@@ -1,18 +1,23 @@
-import React from 'react'
 import { RiMailLine } from '@remixicon/react'
 import SlideUp from '../../../utlits/animations/slideUp'
-import { DataService } from '../../../backendApi'
+import { DataService, FormDto } from '../../../backendApi'
 
+
+const reemail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
 const ContactForm = () => {
 
-    async function submitForm(e) {
+    function formIsValid(fd: FormDto): boolean {
+        return fd.email != null && reemail.test(fd.email)
+    }
+
+    async function submitForm(e: any) {
         e.preventDefault()
-        const form = document.getElementById('contactForm')
-        const data = Object.fromEntries(new FormData(form).entries())
+        const form = document.getElementById('contactForm') as HTMLFormElement
+        const data = Object.fromEntries(new FormData(form).entries()) as FormDto
+        if (!formIsValid(data)) return
         const response = await DataService.formControllerSubmitForm(data)
-        if (response.status === 200) {
-            form.reset()
+        if (response.status == 201) {
             document.getElementById('msgSubmit').classList.add('text-success')
             document.getElementById('msgSubmit').innerHTML = "Message Submitted Successfully"
         } else {
@@ -30,7 +35,7 @@ const ContactForm = () => {
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="name">Full Name</label>
-                                    <input type="text" id="name" name="name" className="form-control" placeholder="Steve Milner" required={true} maxLength={25} data-error="Please enter your Name" />
+                                    <input type="text" id="name" name="name" className="form-control" placeholder="Steve Milner" required={true} minLength={4} maxLength={25} data-error="Please enter your Name" />
                                     <label htmlFor="name" className="for-icon"><i className="far fa-user"></i></label>
                                     <div className="help-block with-errors"></div>
                                 </div>
@@ -38,7 +43,7 @@ const ContactForm = () => {
                             <div className="col-md-6">
                                 <div className="form-group">
                                     <label htmlFor="email">Email Address</label>
-                                    <input type="email" id="email" name="email" className="form-control" placeholder="hi@mail.com" required={true} maxLength={35} data-error="Please enter your Email" />
+                                    <input type="email" id="email" name="email" className="form-control" placeholder="hi@mail.com" required={true} minLength={5} maxLength={35} data-error="Please enter your Email" />
                                     <label htmlFor="email" className="for-icon"><i className="far fa-envelope"></i></label>
                                     <div className="help-block with-errors"></div>
                                 </div>
@@ -46,7 +51,7 @@ const ContactForm = () => {
                             <div className="col-md-12">
                                 <div className="form-group">
                                     <label htmlFor="message">Your Message</label>
-                                    <textarea name="message" id="message" className="form-control" rows="4" placeholder="Write Your message" required={true} maxLength={250} data-error="Please Write your Message"></textarea>
+                                    <textarea name="message" id="message" className="form-control" rows={4} placeholder="Write Your message" required={true} minLength={10} maxLength={250} data-error="Please Write your Message"></textarea>
                                     <div className="help-block with-errors"></div>
                                 </div>
                             </div>

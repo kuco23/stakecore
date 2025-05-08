@@ -1,8 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import Marquee from "react-fast-marquee";
-import { RiTwitterXLine } from '@remixicon/react'
-import { DelegationAddressLink, ValidatorNodeLink } from '../utils/links';
+import Marquee from "react-fast-marquee"
+import { RiGithubLine, RiTwitterXLine } from '@remixicon/react'
+import { DelegationAddressLink, ValidatorNodeLink } from '../utils/links'
 import profile from "../../assets/images/about/profile.svg"
 import partner1 from "../../assets/images/client-logos/partner1.png"
 import partner2 from "../../assets/images/client-logos/partner2.png"
@@ -41,7 +40,7 @@ const Hero = () => {
                                         {/* <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li> */}
                                         <li><Link target="_blank" to="https://x.com/stake_core"><RiTwitterXLine size={20} /></Link></li>
                                         {/* <li><Link to=""><RiLinkedinFill size={20} /></Link></li> */}
-                                        {/* <li><Link to=""><RiGithubLine size={20} /></Link></li> */}
+                                        <li><Link target="_blank" to="https://github.com/Stakecore"><RiGithubLine size={20} /></Link></li>
                                     </ul>
                                 </div>
                             </div>
